@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Primer Proyecto 360</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+	<body>
+	<a-scene>
+	    <a-assets>
+		<img id="img1" src="assets/1.png"/>
+        <img id="img2" src="assets/2.png"/>
+        <img id="img3" src="assets/3.png"/>
+	</a-assets>
+	  <a-image src="#img1" position="-1.5 1.8 -3" onclick="show('img1')"></a-image>
+     <a-image src="#img2" position="0 1.8 -3" onclick="show('img2')"></a-image>
+     <a-image src="#img3" position="1.5 1.8 -3" onclick="show('img3')"></a-image>
+    
+   <a-sky src="#img1" id ="sky"></a-sky>
+<a-camera>
+     <a-cursor></a-cursor>
+     </a-camera>
+    </a-scene>
+    <script>
+function show (id){
+document.getElementById('sky').setAttribute('src','#' +id)
+}
+</script> 
+</body>
+<html>
